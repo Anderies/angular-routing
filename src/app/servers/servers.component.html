@@ -4,8 +4,8 @@
       <!-- queryParams to add sign "?" -->
       <!-- fragment to add sign "#" -->
       <a
-        [routerLink]="['/servers',5,'edit']"
-        [queryParams]="{allowEdit: '1'}"
+        [routerLink]="['/servers',server.id]"
+        [queryParams]="{allowEdit: server.id}"
         [fragment]="loading"
         class="list-group-item"
         *ngFor="let server of servers">
@@ -19,7 +19,7 @@
     <!-- <a routerLink="/servers">Reload Page</a> -->
     <app-edit-server></app-edit-server>
     <hr>
-    <app-server></app-server>
+    <!-- <app-server></app-server> -->
   </div>
 </div>
 

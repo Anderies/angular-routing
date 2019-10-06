@@ -17,9 +17,9 @@ export class EditServerComponent implements OnInit {
               private currentRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    console.log(this.currentRoute.snapshot.queryParams);
-    console.log(this.currentRoute.snapshot.fragment);
+    // Retrieve Query Params ?allowEdit
     this.currentRoute.queryParams.subscribe();
+    // Retrieve Fragment #loading
     this.currentRoute.fragment.subscribe();
     this.server = this.serversService.getServer(1);
     this.serverName = this.server.name;
