@@ -1,8 +1,12 @@
 <div class="row">
   <div class="col-xs-12 col-sm-4">
     <div class="list-group">
+      <!-- queryParams to add sign "?" -->
+      <!-- fragment to add sign "#" -->
       <a
-        href="#"
+        [routerLink]="['/servers',5,'edit']"
+        [queryParams]="{allowEdit: '1'}"
+        [fragment]="loading"
         class="list-group-item"
         *ngFor="let server of servers">
         {{ server.name }}
