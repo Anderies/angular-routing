@@ -26,7 +26,8 @@ export class ServerComponent implements OnInit {
 
   onEdit(){
     // relativeTo getting current path you are right now and adding edit
-    this.router.navigate(['edit'],{relativeTo: this.currentRoute});
+    // queryParamsHandling taking string as value
+    this.router.navigate(['edit'],{relativeTo: this.currentRoute , queryParamsHandling: 'preserve'});
     // or you can use this to navigate
     // this.router.navigate(['/servers' ,this.server.id,'edit']);
   }
